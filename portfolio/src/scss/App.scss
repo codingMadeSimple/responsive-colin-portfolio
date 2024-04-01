@@ -1,0 +1,40 @@
+// Import Bootstrap styles
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Define themes
+$themes: (
+ light: (
+   text: #1a1542,
+   background: #d6c1e1,
+   primary: #9000ff,
+   secondary: #a215a0,
+   accent: #000000,
+ ),
+ dark: (
+   text: #c1bcea,
+   background: #331e3e,
+   primary: #9000ff,
+   secondary: #ea5de8,
+   accent: #ffffff,
+ ),
+);
+
+.App {
+  text-align: center;
+}
+
+
+// Define custom styles using theme variables
+body {
+  color: map-get(map-get($themes, light), text);
+  background-color: map-get(map-get($themes, light), background);
+}
+
+.nav-bar-items{
+  flex-direction:row;
+  justify-content:flex-end;
+}
+
+
+
+/* You can add more styles using theme variables here */
