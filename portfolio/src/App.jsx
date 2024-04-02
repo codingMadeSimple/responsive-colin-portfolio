@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
 import ProjectListItem from './components/ProjectListItem';
+import Skills from './components/Skills';
+import Statistics from './components/Statistics';
 import './scss/App.scss';
 
 const projectObject = [
@@ -37,6 +39,8 @@ function App() {
     <div className="App">
       <NavBar />
       <ProjectListItem projectObject={projectObject}/>
+      <Skills/>
+      <Statistics/>
     </div>
   );
 }

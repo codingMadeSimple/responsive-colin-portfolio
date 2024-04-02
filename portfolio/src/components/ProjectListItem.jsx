@@ -7,7 +7,8 @@ function ProjectListItem(props) {
 
 
   return (
-    <div className="project">
+    <section className="project">
+      <h1>Projects</h1>
       <h2>{props.projectObject[0].projectName}</h2>
       <div className="project-card">
         <img className="project-img" src="https://raw.githubusercontent.com/NeonWaffles222/Charcoal-Cabernet/master/docs/Top%20of%20Homepage.png" />
@@ -119,7 +120,7 @@ function ProjectListItem(props) {
 
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
