@@ -7,12 +7,12 @@ import './scss/App.scss';
 const projectObject = [
   {
     projectName: "Charcoal & Cabernet",
-    projectDescription: "A web application for restaurants that allows users to reserve specific seating while booking a reservation. A user can register and log in. A user is able to store their favorites between sessions. A user will also receive texts that update their delivery status.",
+    projectDescription: "A restaurant-focused web app where a user can register, log in/out and store their favorite dishes. They can also create, view, and edit orders and receive delivery status updates via text. A user that wishes to dine in will need to select a date, time and party size. An interactive map will then appear showing availability in blue and unavailable/booked seats in red.",
     projectLink: "https://github.com/codingMadeSimple/Charcoal-Cabernet",
     projectScreenshot: "https://raw.githubusercontent.com/NeonWaffles222/Charcoal-Cabernet/master/docs/Top%20of%20Homepage.png",
     screenshotAlt: "Charcoal and Cabernet Screenshot Placeholder",
     frontendStack: "React JS, CSS, SCSS",
-    backendStack: "Ruby and Rails Backend",
+    backendStack: "Ruby on Rails Backend, MVC architecture",
     apis: "Stripe, Twilio, Material-UI, React Router",
     partners: {
       Noah: {
