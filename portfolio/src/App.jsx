@@ -1,10 +1,13 @@
 import logo from './logo.svg';
+import {useState} from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
 import ProjectListItem from './components/ProjectListItem';
 import Skills from './components/Skills';
 import Statistics from './components/Statistics';
+import ProjectListItem2 from './components/ProjectListItem2';
 import './scss/App.scss';
+
 
 const projectObject = [
   {
@@ -33,16 +36,19 @@ const projectObject = [
 ];
 
 function App() {
-
+  const [currentSection, setCurrentSection] = useState('');
 
   return (
     <div className="App">
-      <NavBar />
-      <ProjectListItem projectObject={projectObject}/>
-      <Skills/>
-      <Statistics/>
+      <NavBar handleNavLinkClick={(section) => setCurrentSection(section)} />
+      <Skills />
+      <Statistics />
+      {/* <ProjectListItem projectObject={projectObject} /> */}
+      <ProjectListItem2 projectObject={projectObject}/>
     </div>
   );
 }
 
 export default App;
+
+

@@ -1,6 +1,58 @@
 // Import Bootstrap styles
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
+$spacer: 10px;
+$prefix: "project";
+
+$card-spacer-y: $spacer;
+$card-spacer-x: $spacer;
+$card-title-spacer-y: $spacer * 0.5;
+$card-title-color: null;
+$card-subtitle-color: null;
+$card-border-width: var(
+  --#{$prefix}border-width
+); // Assuming this is defined elsewhere
+$card-border-color: var(
+  --#{$prefix}border-color-translucent
+); // Assuming this is defined elsewhere
+$card-border-radius: var(
+  --#{$prefix}border-radius
+); // Assuming this is defined elsewhere
+$card-box-shadow: null;
+$card-inner-border-radius: subtract(
+  $card-border-radius,
+  $card-border-width
+); // Assuming you have the function 'subtract' defined
+$card-cap-padding-y: $card-spacer-y * 0.5;
+$card-cap-padding-x: $card-spacer-x;
+$card-cap-bg: rgba(
+  var(--#{$prefix}body-color-rgb),
+  0.03
+); // Assuming this is defined elsewhere
+$card-cap-color: null;
+$card-height: null;
+$card-color: null;
+$card-bg: var(--#{$prefix}body-bg); // Assuming this is defined elsewhere
+$card-img-overlay-padding: $spacer;
+$card-group-margin: $grid-gutter-width * 0.5; // Assuming $grid-gutter-width is
+
+$card-spacer-y: $spacer;
+$card-spacer-x: $spacer;
+$card-title-spacer-y: $spacer * 0.5;
+$card-border-width: $border-width;
+$card-border-radius: $border-radius;
+$card-border-color: rgba($black, 0.125);
+$card-inner-border-radius: subtract($card-border-radius, $card-border-width);
+$card-cap-padding-y: $card-spacer-y * 0.5;
+$card-cap-padding-x: $card-spacer-x;
+$card-cap-bg: rgba($black, 0.03);
+$card-cap-color: null;
+$card-height: null;
+$card-color: null;
+$card-bg: $white;
+$card-img-overlay-padding: $spacer;
+$card-group-margin: $grid-gutter-width * 0.5;
+
 // Define themes
 $themes: (
   light: (
@@ -25,10 +77,10 @@ $themes: (
 
 :root {
   font-family: "Roboto";
-  --text-primary: #ffc300;
-  --text-secondary: #c70039;
-  --bg-primary: #241b2f;
-  --bg-secondary: #8fe449;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f2f2f2;
   --transition-speed: 600ms;
 }
 
@@ -147,13 +199,17 @@ main {
 }
 
 .nav-link:hover {
-  filter: grayscale(0%) opacity(1);
+  filter: grayscale(25%) opacity(1);
 }
 
 .link-text {
   display: none;
-  color: var(--text-primary);
+  color: #ffc300;
   margin-left: 1rem;
+}
+
+.link-text:hover {
+  color: #ffc300;
 }
 
 .project {
@@ -164,6 +220,11 @@ main {
   align-items: center;
 }
 
+.project-list-item-2-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .project-heading {
   display: flex;
   flex-direction: column;
@@ -242,6 +303,47 @@ main {
   justify-content: center;
 }
 
+/*Skills styling*/
+.skills-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.skills-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.skills-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-container ul li {
+  margin-bottom: 8px;
+}
+
+.skills-container ul li strong {
+  font-weight: bold;
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats-image-container img {
+  border-radius: 5rem;
+  padding: 1rem;
+}
+
 /* Medium screens */
 @media only screen and (max-width: 1025px) {
   .navbar {
@@ -281,7 +383,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left:5rem;
+    padding-left: 5rem;
   }
 
   .project-img {
@@ -333,7 +435,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left:0rem;;
+    padding-left: 0rem;
   }
 
   .project-img {
@@ -346,7 +448,6 @@ main {
     padding-bottom: 5rem;
   }
 }
-
 
 /* Large screens */
 @media only screen and (min-width: 600px) {

@@ -1,16 +1,17 @@
 import React from 'react';
+import '../scss/App.scss';
 
 const Skills = () => {
   return (
-    <div>
+    <section className="skills-container" id="skills">
       <h2>Skills</h2>
       <ul>
-        <li>Languages: JavaScript, Ruby, CSS, HTML</li>
-        <li>Testing: Cypress, Jest, Mocha, Chai, Rspec</li>
-        <li>Frameworks & Libraries: ReactJS, NodeJS, SASS, Bootstrap, jQuery, AJAX, EJS, Express, Rails, Material-UI, Stripe, Twilio</li>
-        <li>Systems, CMS, and Databases: SQL, PostgreSQL, Elephantsql, Git</li>
+        <li><strong>Languages:</strong> JavaScript, Ruby, CSS, HTML</li>
+        <li><strong>Testing:</strong> Cypress, Jest, Mocha, Chai, Rspec</li>
+        <li><strong>Frameworks & Libraries:</strong> ReactJS, NodeJS, SASS, Bootstrap, jQuery, AJAX, EJS, Express, Rails, Material-UI, Stripe, Twilio</li>
+        <li><strong>Systems, CMS, and Databases:</strong> SQL, PostgreSQL, Elephantsql, Git</li>
       </ul>
-    </div>
+    </section>
   );
 };
 

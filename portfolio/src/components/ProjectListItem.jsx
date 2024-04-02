@@ -7,7 +7,7 @@ function ProjectListItem(props) {
 
 
   return (
-    <section className="project">
+    <section className="project" id="#project">
       <h1>Projects</h1>
       <h2>{props.projectObject[0].projectName}</h2>
       <div className="project-card">

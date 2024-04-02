@@ -1,7 +1,15 @@
 import * as React from 'react';
 import '../scss/App.scss';
 
-function NavBar() {
+function NavBar({ handleNavLinkClick }) {
+
+  const handleNavItemClick = (section) => {
+    handleNavLinkClick(section);
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <nav class="navbar">
@@ -32,8 +40,8 @@ function NavBar() {
           </a>
         </li>
         {/* Projects */}
-        <li class="nav-item">
-          <a href="#projects" class="nav-link">
+        <li class="nav-item" >
+          <a href="#project" onClick={() => handleNavItemClick('#project')} class="nav-link">
             <svg
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +58,7 @@ function NavBar() {
         </li>
         {/* Skills */}
         <li class="nav-item">
-          <a href="#skills" class="nav-link">
+          <a href="#skills" onClick={() => handleNavItemClick('#skills')} class="nav-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512">
@@ -64,7 +72,7 @@ function NavBar() {
         </li>
         {/* Statistics */}
         <li class="nav-item">
-          <a href="#statistics" class="nav-link">
+          <a href="#statistics" onClick={() => handleNavItemClick('#statistics')} class="nav-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512">
@@ -79,7 +87,7 @@ function NavBar() {
         </li>
         {/* Profile */}
         <li class="nav-item">
-          <a href="#profile" class="nav-link">
+          <a href="#profile" onClick={() => handleNavItemClick('#profile')} class="nav-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512">
@@ -94,7 +102,7 @@ function NavBar() {
         </li>
         {/* GitHub */}
         <li class="nav-item">
-          <a href="#socials" class="nav-link">
+          <a href="#socials" onClick={() => handleNavItemClick('#socials')} class="nav-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512">
@@ -109,7 +117,7 @@ function NavBar() {
         </li>
         {/* Contact Me Page */}
         <li class="nav-item">
-          <a href="#email" class="nav-link">
+          <a href="#contact" onClick={() => handleNavItemClick('#contact')} class="nav-link">
             <svg
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
