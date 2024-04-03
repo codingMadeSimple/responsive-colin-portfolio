@@ -1,98 +1,47 @@
 // Import Bootstrap styles
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
-$spacer: 10px;
-$prefix: "project";
+:root {
+  font-family: "Roboto";
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --bg-primary: #ffffffb4;
+  --bg-secondary: #0b1307;
+  --transition-speed: 600ms;
+}
 
-$card-spacer-y: $spacer;
-$card-spacer-x: $spacer;
-$card-title-spacer-y: $spacer * 0.5;
-$card-title-color: null;
-$card-subtitle-color: null;
-$card-border-width: var(
-  --#{$prefix}border-width
-); // Assuming this is defined elsewhere
-$card-border-color: var(
-  --#{$prefix}border-color-translucent
-); // Assuming this is defined elsewhere
-$card-border-radius: var(
-  --#{$prefix}border-radius
-); // Assuming this is defined elsewhere
-$card-box-shadow: null;
-$card-inner-border-radius: subtract(
-  $card-border-radius,
-  $card-border-width
-); // Assuming you have the function 'subtract' defined
-$card-cap-padding-y: $card-spacer-y * 0.5;
-$card-cap-padding-x: $card-spacer-x;
-$card-cap-bg: rgba(
-  var(--#{$prefix}body-color-rgb),
-  0.03
-); // Assuming this is defined elsewhere
-$card-cap-color: null;
-$card-height: null;
-$card-color: null;
-$card-bg: var(--#{$prefix}body-bg); // Assuming this is defined elsewhere
-$card-img-overlay-padding: $spacer;
-$card-group-margin: $grid-gutter-width * 0.5; // Assuming $grid-gutter-width is
-
-$card-spacer-y: $spacer;
-$card-spacer-x: $spacer;
-$card-title-spacer-y: $spacer * 0.5;
-$card-border-width: $border-width;
-$card-border-radius: $border-radius;
-$card-border-color: rgba($black, 0.125);
-$card-inner-border-radius: subtract($card-border-radius, $card-border-width);
-$card-cap-padding-y: $card-spacer-y * 0.5;
-$card-cap-padding-x: $card-spacer-x;
-$card-cap-bg: rgba($black, 0.03);
-$card-cap-color: null;
-$card-height: null;
-$card-color: null;
-$card-bg: $white;
-$card-img-overlay-padding: $spacer;
-$card-group-margin: $grid-gutter-width * 0.5;
-
-// Define themes
 $themes: (
-  light: (
-    text: #ffc300,
-    background: #571845,
-    primary: #8fe449,
-    secondary: #900c3e,
-    accent: #c70039,
-  ),
-  dark: (
-    text: #eafae0,
-    background: #0b1307,
-    primary: #61b61b,
-    secondary: #45d8fc,
-    accent: #603ce2,
-  ),
+ light: (
+   text: #333333,
+   background: #ffffff,
+   primary: #666666,
+   secondary: #333333,
+   accent: #dd36ab,
+ ),
+ dark: (
+   text: #cccccc,
+   background: #000000,
+   primary: #999999,
+   secondary: #cccccc,
+   accent: #c92297,
+ ),
 );
+
+$spacer: 10px;
+$prefix: "light";
 
 @function getColor($theme, $color) {
   @return map-get(map-get($themes, $theme), $color);
 }
 
-:root {
-  font-family: "Roboto";
-  --text-primary: #333333;
-  --text-secondary: #666666;
-  --bg-primary: #ffffff;
-  --bg-secondary: #f2f2f2;
-  --transition-speed: 600ms;
-}
-
 .App {
   box-sizing: border-box;
+  background-color: var(--bg-primary);
 }
 
 body {
-  color: var(--text-primary);
-  background-color: var(--bg-primary);
-  // color: black;
-  // background-color: white;
+  color: getColor(light, text);
+  background-color: getColor(light, background); 
   margin: 0;
   padding: 0;
 }
@@ -116,7 +65,7 @@ main {
 
 .navbar {
   position: fixed;
-  background-color: getColor("dark", "background");
+  background-color: var(--bg-secondary);
   transition: width 600ms ease;
   color: var(--text-primary);
   // overflow: scroll;
@@ -215,42 +164,43 @@ main {
 //Profile Styling
 
 .profile-container {
-  max-width: 50%;
-  margin: 0 auto;
+  max-width: 40%;
+  margin: auto;
   padding: 20px;
   border: 2px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;
 }
 
-// Project Styling
-.project {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-left: 5.5rem;
-  align-items: center;
-}
-
-.project-list-item-2-container {
+.profile-skills {
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding: 3rem;
 }
 
-// .project-list-item-2-container div:hover{
-//   box-shadow: 5px 1px #888888;
-// }
+// Project Styling
 
-// .project-key-take-aways{
+.project-list-item-2-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3rem;
+  overflow-y: hidden;
+}
 
-// }
+.project-list-item-2-container:hover .card-title,
+.project-list-item-2-container:hover .card-text,
+.project-list-item-2-container:hover .project-key-take-aways,
+.project-list-item-2-container:hover .text-body-secondary {
+  color: map-get(map-get($themes, light), text);
+  transition: color var(--transition-speed) ease;
+}
 
 /*Skills styling*/
 .skills-container {
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 40%;
+  margin: auto;
   padding: 20px;
   border: 2px solid #ccc;
   border-radius: 5px;
@@ -275,7 +225,17 @@ main {
   font-weight: bold;
 }
 
-.stats-container {
+.stats-card {
+  display: flex;
+  flex-direction: row;
+}
+
+.stats-card p {
+  padding-left: 1rem;
+  align-items: baseline;
+}
+
+.statistics-container {
   display: flex;
   flex-direction: row;
   padding: 1rem;
@@ -283,28 +243,36 @@ main {
   align-items: center;
 }
 
-.stats-image-container img {
+.statistics-image-container img {
   border-radius: 5rem;
   padding: 1rem;
 }
 
+.social-padding {
+  // background-color: getColor("dark", "background");
+  display: flex;
+  flex-direction: column;
+}
+
 .social-icons {
   display: flex;
-  flex-direction: row;
+  // flex-direction: row;
   list-style-type: none;
-  justify-content: space-between;
+  // justify-content: space-between;
+  // padding: 0;
+  // margin: 0;
 }
 
 .social-icons li {
   width: 50%;
 }
 
-.social-icons li:hover {
-  filter: grayscale(50%) opacity(0.7);
+.social-icons li a{
+  color: getColor("dark", "accent");
 }
 
-.footer {
-  background-color: getColor("dark", "background");
+.social-icons li a:hover {
+  filter: grayscale(25%) opacity(0.7);
 }
 
 /* Medium screens */
@@ -314,6 +282,7 @@ main {
     width: 100%;
     height: 5rem;
     justify-content: space-around;
+    z-index: 1000;
   }
 
   .logo {
@@ -356,6 +325,22 @@ main {
 
   .project-socials-stack {
     padding-bottom: 5rem;
+  }
+
+  .skills-container {
+    max-width: 40%;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+  .profile-skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
   }
 }
 
@@ -402,6 +387,33 @@ main {
   .project-socials-stack {
     padding-bottom: 5rem;
   }
+
+  .skills-container {
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+  .profile-container {
+    max-width: 90%;
+  }
+
+  .profile-skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+  }
+
+  .social-padding {
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
 }
 
 /* Large screens */

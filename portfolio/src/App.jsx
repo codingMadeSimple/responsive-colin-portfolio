@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import {useState} from 'react';
+import { useState } from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
 import ProjectListItem from './components/ProjectListItem';
@@ -42,12 +42,14 @@ function App() {
 
   return (
     <div className="App">
-      <Statistics />
       <NavBar handleNavLinkClick={(section) => setCurrentSection(section)} />
-      <Profile />
-      <Skills />
-      <ProjectListItem2 projectObject={projectObject}/>
-      <Footer/>
+      <Statistics />
+      <div className="profile-skills">
+        <Profile />
+        <Skills />
+      </div>
+      <ProjectListItem2 projectObject={projectObject} />
+      <Footer />
     </div>
   );
 }

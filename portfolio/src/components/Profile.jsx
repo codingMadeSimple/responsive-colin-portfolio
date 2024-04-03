@@ -4,7 +4,7 @@ import '../scss/App.scss';
 const Profile = () => {
   return (
     <section className="profile-container" id="#profile">
-      <h2>From Climber to Coder</h2>
+      <h2>From Climbing to Coding</h2>
       <p>Hi, I’m Colin Spangelo a Web Developer looking to break into the industry before AI takes over everything. I come from a long background in the Recreation Industry, be it Freestyle Skiing, Climbing, White Water Rafting or mentoring, I love to create systems that make life easier and more efficient. </p>
 
       <div>
