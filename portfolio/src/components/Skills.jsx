@@ -8,7 +8,7 @@ const Skills = () => {
       <ul>
         <li><strong>Languages:</strong> JavaScript, Ruby, CSS, HTML</li>
         <li><strong>Testing:</strong> Cypress, Jest, Mocha, Chai, Rspec</li>
-        <li><strong>Frameworks & Libraries:</strong> ReactJS, NodeJS, SASS, Bootstrap, jQuery, AJAX, EJS, Express, Rails, Material-UI, Stripe, Twilio</li>
+        <li><strong>Frameworks, API's & Libraries:</strong> ReactJS, NodeJS, SASS, Bootstrap, Material-UI, jQuery, AJAX, EJS, Express, Rails,  Stripe, Twilio</li>
         <li><strong>Systems, CMS, and Databases:</strong> SQL, PostgreSQL, Elephantsql, Git</li>
       </ul>
     </section>
