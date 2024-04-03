@@ -6,6 +6,8 @@ import ProjectListItem from './components/ProjectListItem';
 import Skills from './components/Skills';
 import Statistics from './components/Statistics';
 import ProjectListItem2 from './components/ProjectListItem2';
+import Profile from './components/Profile';
+import Footer from './components/Footer';
 import './scss/App.scss';
 
 
@@ -40,11 +42,12 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar handleNavLinkClick={(section) => setCurrentSection(section)} />
-      <Skills />
       <Statistics />
-      {/* <ProjectListItem projectObject={projectObject} /> */}
+      <NavBar handleNavLinkClick={(section) => setCurrentSection(section)} />
+      <Profile />
+      <Skills />
       <ProjectListItem2 projectObject={projectObject}/>
+      <Footer/>
     </div>
   );
 }

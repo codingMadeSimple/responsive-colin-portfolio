@@ -41,7 +41,7 @@ function NavBar({ handleNavLinkClick }) {
         </li>
         {/* Projects */}
         <li class="nav-item" >
-          <a href="#project" onClick={() => handleNavItemClick('#project')} class="nav-link">
+          <a href="#project-list-item-2" onClick={() => handleNavItemClick('#project-list-item-2')} class="nav-link">
             <svg
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
