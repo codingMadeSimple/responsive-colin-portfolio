@@ -11,20 +11,20 @@
 }
 
 $themes: (
- light: (
-   text: #333333,
-   background: #ffffff,
-   primary: #666666,
-   secondary: #333333,
-   accent: #dd36ab,
- ),
- dark: (
-   text: #cccccc,
-   background: #000000,
-   primary: #999999,
-   secondary: #cccccc,
-   accent: #c92297,
- ),
+  light: (
+    text: #333333,
+    background: #ffffff,
+    primary: #666666,
+    secondary: #333333,
+    accent: #dd36ab,
+  ),
+  dark: (
+    text: #cccccc,
+    background: #000000,
+    primary: #999999,
+    secondary: #cccccc,
+    accent: #c92297,
+  ),
 );
 
 $spacer: 10px;
@@ -41,9 +41,10 @@ $prefix: "light";
 
 body {
   color: getColor(light, text);
-  background-color: getColor(light, background); 
+  background-color: getColor(light, background);
   margin: 0;
   padding: 0;
+  // width:100%;
 }
 
 body::-webkit-scrollbar {
@@ -161,6 +162,67 @@ main {
   color: #ffc300;
 }
 
+// Hero Styling
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  background: url(../assets/hero-image.jpg);
+  // background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: brightness(60%);
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  text-align: center;
+  margin: 0.625rem;
+  opacity: 80%;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  font-weight: 200;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.hero-subtitle-2 {
+  // min-height: 1rem;
+  // max-height: 1rem;
+  min-height:100vh;
+}
+
+.hero-button {
+  background-color: #ae2d59;
+  color: white;
+  margin-top: 5rem;
+  font-size: 1.125rem;
+  font-weight: 200;
+  cursor: pointer;
+}
+
 //Profile Styling
 
 .profile-container {
@@ -267,7 +329,7 @@ main {
   width: 50%;
 }
 
-.social-icons li a{
+.social-icons li a {
   color: getColor("dark", "accent");
 }
 
@@ -413,7 +475,6 @@ main {
     display: flex;
     flex-direction: column;
   }
-
 }
 
 /* Large screens */

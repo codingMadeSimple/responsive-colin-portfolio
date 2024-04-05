@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import { useState } from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
+import Banner from './components/Banner';
 import ProjectListItem from './components/ProjectListItem';
 import Skills from './components/Skills';
 import Statistics from './components/Statistics';
@@ -43,6 +44,7 @@ function App() {
   return (
     <div className="App">
       <NavBar handleNavLinkClick={(section) => setCurrentSection(section)} />
+      <Banner />
       <Statistics />
       <div className="profile-skills">
         <Profile />
