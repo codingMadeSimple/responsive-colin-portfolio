@@ -53,6 +53,7 @@ const Banner = () => {
     } else {
       setIndex(prevIndex => prevIndex + 1);
     }
+    
   };
 
   return (
