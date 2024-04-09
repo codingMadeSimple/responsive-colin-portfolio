@@ -5,7 +5,7 @@ import '../scss/App.scss';
 
 const Footer = () => {
   return (
-    <footer id="socials">
+    <footer id="socials" className="footer">
       <div className="container d-flex justify-content-center">
         <div className="justify-content-center social-padding">
           <div>

@@ -258,7 +258,7 @@ main {
 //Profile Styling
 
 .profile-container {
-  max-width: 40%;
+  max-width: 45%;
   margin: auto;
   padding: 20px;
   border: 2px solid #ccc;
@@ -270,7 +270,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 3rem;
+  padding-left: 5rem;
 }
 
 // Project Styling
@@ -279,7 +279,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 3rem;
+  padding-left: 5rem;
   overflow-y: hidden;
 }
 
@@ -290,7 +290,7 @@ main {
 
 /*Skills styling*/
 .skills-container {
-  max-width: 40%;
+  max-width: 45%;
   margin: auto;
   padding: 20px;
   border: 2px solid #ccc;
@@ -339,8 +339,14 @@ main {
 }
 
 .statistics-image-container img {
+  aspect-ratio: 21/9;
   border-radius: 5rem;
   padding: 1rem;
+}
+
+.footer{
+  padding:1rem;
+  padding-left:5rem;
 }
 
 .social-padding {
@@ -397,18 +403,8 @@ main {
   }
 
   .statistics{
-    padding-left:0rem;
+    padding:0rem;
   }
-
-  .project {
-    padding: 1rem;
-  }
-
-  .project-list-item-2-container {
-    padding: auto;
-
-  }
-
 
   .project-socials-stack {
     padding-bottom: 5rem;
@@ -429,10 +425,6 @@ main {
     justify-content: center;
     padding: 2rem;
   }
-  
-}
-
-@media only screen and (max-width: 600px) {
   .navbar {
     bottom: 0;
     width: 100%;
@@ -466,10 +458,12 @@ main {
     padding-bottom: 1rem;
   }
 
-  .project-img {
+  .project-list-item-2-container {
     display: flex;
-    width: 95%;
-    border-radius: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 0rem;
+    height:fit-content;
   }
 
   .project-socials-stack {
@@ -501,6 +495,11 @@ main {
     display: flex;
     flex-direction: column;
   }
+
+  .footer{
+    padding:1rem;
+  }
+  
 }
 
 /* Large screens */
@@ -509,6 +508,11 @@ main {
     top: 0;
     width: 5rem;
     height: 100vh;
+  }
+
+  .navbar-nav{
+    display:flex;
+    flex-direction:column;
   }
 
   .navbar:hover {
@@ -526,6 +530,15 @@ main {
   .navbar:hover .logo-text {
     left: 0px;
   }
+
+  .project-list-item-2-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 5rem;
+    height:fit-content;
+  }
+
 }
 
 .dark {
