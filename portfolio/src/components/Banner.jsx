@@ -53,22 +53,19 @@ const Banner = () => {
     } else {
       setIndex(prevIndex => prevIndex + 1);
     }
-    
+
   };
 
   return (
     <section className="hero">
       <div className="hero-content">
         <h1 className="hero-title">
-          The Journey from Climbing to Coding
+          The <span className="title-journey-gradient">Journey</span> from <span className="title-climbing-gradient">Climbing</span> to <span className="title-coding-gradient">Coding</span>
         </h1>
         <h2 className="hero-subtitle">And everything in between</h2>
-        {text.length >= 0 ? <h4 className="hero-subtitle">{text}</h4> : <h4 className="hero-subtitle-2"> </h4>}
-
-
-        <button type="button" class="btn btn-primary btn-lg" className="hero-button">Large button</button>
-
+        {text.length > 0 ? <h4 className="hero-subtitle">{text}</h4> : <h4 className="hero-subtitle-2">{" "}</h4>}
       </div>
+        <button className="hero-button">Large button</button>
       {/* width and height need to be set to 100vw  */}
       {/* put resume in contact me */}
     </section>

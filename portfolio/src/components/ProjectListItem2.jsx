@@ -8,9 +8,9 @@ const ProjectListItem2 = (props) => {
 
   return (
     <section className="project-list-item-2-container" id="project-list-item-2">
-      <div class="row row-cols-1 row-cols-md-3 g-4 w-75 d-flex justify-content-center shadow p-3 mb-5 bg-body rounded">
+      <div class="row row-cols-1 row-cols-md-1 row-cols-l-1 row-cols-xl-2 g-4 w-75 d-flex justify-content-center bg-body ">
         <div class="col">
-          <div class="card h-100">
+          <div class="card h-100 rounded">
             <img src={projectObject[0].projectScreenshot} class="card-img-top" alt="..." />
             <div class="card-body">
               <h4 class="card-title text-center">{projectObject[0].projectName}</h4>
@@ -27,7 +27,7 @@ const ProjectListItem2 = (props) => {
         </div>
 
         <div class="col">
-          <div class="card h-100">
+          <div class="card h-100 rounded">
             <img src="https://github.com/codingMadeSimple/jungle/raw/master/docs/UserLoggedIn.png?raw=true" class="card-img-top" alt="" />
             <div class="card-body">
               <h4 class="card-title text-center">Jungle</h4>
@@ -46,7 +46,7 @@ const ProjectListItem2 = (props) => {
         </div>
 
         <div class="col">
-          <div class="card h-100">
+          <div class="card h-100 rounded">
             <img src="https://github.com/codingMadeSimple/lastPhotoLabs/raw/master/docs/SelectedTopicPhotos.png?raw=true" class="card-img-top" alt="..." />
             <div class="card-body">
               <h4 class="card-title text-center">Photolabs</h4>

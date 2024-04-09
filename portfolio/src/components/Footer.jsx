@@ -8,7 +8,7 @@ const Footer = () => {
     <footer id="socials">
       <div className="container d-flex justify-content-center">
         <div className="justify-content-center social-padding">
-          <div className="">
+          <div>
             <ul className="social-icons">
               <li><a href="https://github.com/codingMadeSimple" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} style={{fontSize: '36px'}} /></a></li>
               <li><a href="https://www.linkedin.com/in/colin-spangelo/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} style={{fontSize: '36px'}} /></a></li>

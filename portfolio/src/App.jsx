@@ -3,7 +3,6 @@ import { useState } from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
 import Banner from './components/Banner';
-import ProjectListItem from './components/ProjectListItem';
 import Skills from './components/Skills';
 import Statistics from './components/Statistics';
 import ProjectListItem2 from './components/ProjectListItem2';
@@ -43,8 +42,8 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar handleNavLinkClick={(section) => setCurrentSection(section)} />
       <Banner />
+      <NavBar handleNavLinkClick={(section) => setCurrentSection(section)} />
       <Statistics />
       <div className="profile-skills">
         <Profile />
