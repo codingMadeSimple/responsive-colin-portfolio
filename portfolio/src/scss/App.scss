@@ -482,6 +482,7 @@ main {
 
   .profile-container {
     max-width: 90%;
+    margin-bottom: 3rem;
   }
 
   .profile-skills {
@@ -509,6 +510,7 @@ main {
     top: 0;
     width: 5rem;
     height: 100vh;
+    z-index: 1;
   }
 
   .navbar-nav{
@@ -538,6 +540,11 @@ main {
     justify-content: center;
     padding-left: 5rem;
     height:fit-content;
+  }
+
+  .profile-skills {
+    padding: 1rem;
+    padding-left:5rem;
   }
 
 }
