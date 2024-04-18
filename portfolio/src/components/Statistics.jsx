@@ -29,7 +29,7 @@ const Statistics = () => {
           </div>
           <div className="stats-card">
             <FontAwesomeIcon icon={faGithub} />
-            <p >68 Commits This Year</p>
+            <p >80 Commits This Year</p>
           </div>
           <div className="stats-card">
             <FontAwesomeIcon icon={faArrowTrendUp} />

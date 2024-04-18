@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-// import styled from "styled-components";
 
 const Contact = () => {
 
@@ -11,12 +10,16 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
-        publicKey: 'YOUR_PUBLIC_KEY',
+      .sendForm(
+        'service_gxqy53o',
+         'template_6u9p83j',
+          form.current, {
+        publicKey: 'vw7sd8HTqwjOtR6RP',
       })
       .then(
         () => {
           console.log('SUCCESS!');
+          form.current.reset();
         },
         (error) => {
           console.log('FAILED...', error.text);

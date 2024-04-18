@@ -22,7 +22,7 @@ $themes: (
     text: #cccccc,
     background: #000000,
     primary: #999999,
-    secondary: #cccccc,
+    secondary: #ffffff,
     accent: #df49a6,
   ),
 );
@@ -418,6 +418,12 @@ main {
       // color: white;
       border: 1px solid rgb(220, 220, 220);
     }
+    
+    input[type="submit"]:hover {
+      cursor: pointer;
+      background-color: getColor(light, primary);
+      color: getColor(light, accent);
+    }
   }
 }
 
@@ -432,6 +438,7 @@ main {
 .social-icons li a:hover {
   filter: grayscale(25%) opacity(0.7);
 }
+
 
 /* Medium screens */
 @media only screen and (max-width: 1025px) {
