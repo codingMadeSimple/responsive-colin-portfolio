@@ -8,6 +8,7 @@ import Statistics from './components/Statistics';
 import ProjectListItem2 from './components/ProjectListItem2';
 import Profile from './components/Profile';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 import './scss/App.scss';
 
 
@@ -50,6 +51,7 @@ function App() {
         <Skills />
       </div>
       <ProjectListItem2 projectObject={projectObject} />
+      <Contact />
       <Footer />
     </div>
   );
