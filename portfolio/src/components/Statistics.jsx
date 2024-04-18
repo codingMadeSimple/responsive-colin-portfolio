@@ -8,12 +8,13 @@ import { faArrowTrendUp } from '@fortawesome/free-solid-svg-icons';
 const Statistics = () => {
   return (
     <section className="statistics" id="statistics">
+      <h2 className="container d-flex justify-content-center">Statistics</h2>
       <div className="statistics-container">
         <div className="statistics-image-container">
           <a href="https://www.linkedin.com/in/colin-spangelo/"
             target="_blank"
           ><img
-              src="https://media.licdn.com/dms/image/D5635AQFvLouV3noONw/profile-framedphoto-shrink_200_200/0/1711387411703?e=1712700000&v=beta&t=hweik05lns-DZcjIJWksZ_-swHpPnYQtFogtJUthxBQ"
+              src="https://media.licdn.com/dms/image/D5635AQFvLouV3noONw/profile-framedphoto-shrink_200_200/0/1711387411703?e=1714071600&v=beta&t=YvWIMWo5YtC1xArvxx4iPRI-hCmRS-4H5J03COM4IZw"
               alt="profile-picture" />
           </a>
         </div>

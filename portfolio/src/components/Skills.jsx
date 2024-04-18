@@ -4,7 +4,7 @@ import '../scss/App.scss';
 const Skills = () => {
   return (
     <section className="skills-container" id="skills">
-      <h2>Skills</h2>
+      <h2 className="container d-flex justify-content-center">Skills</h2>
       <ul>
         <li><strong>Languages:</strong> JavaScript, Ruby, CSS, HTML</li>
         <li><strong>Testing:</strong> Cypress, Jest, Mocha, Chai, Rspec</li>
