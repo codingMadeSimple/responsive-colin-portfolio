@@ -63,9 +63,9 @@ const Banner = () => {
           The <span className="title-journey-gradient">Journey</span> from <span className="title-climbing-gradient">Climbing</span> to <span className="title-coding-gradient">Coding</span>
         </h1>
         <h2 className="hero-subtitle">And everything in between</h2>
-        {text.length > 0 ? <h4 className="hero-subtitle">{text}</h4> : <h4 className="hero-subtitle-2">{" "}</h4>}
+        {text.length > 0 ? <h4 className="hero-subtitle">{text}</h4> : <h4 className="hero-subtitle-2">{""}</h4>}
       </div>
-        <button className="hero-button">Large button</button>
+        {/* <button className="hero-button">Large button</button> */}
       {/* width and height need to be set to 100vw  */}
       {/* put resume in contact me */}
     </section>

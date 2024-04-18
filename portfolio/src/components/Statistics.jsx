@@ -14,7 +14,7 @@ const Statistics = () => {
           <a href="https://www.linkedin.com/in/colin-spangelo/"
             target="_blank"
           ><img
-              src="https://media.licdn.com/dms/image/D5635AQFvLouV3noONw/profile-framedphoto-shrink_200_200/0/1711387411703?e=1714071600&v=beta&t=YvWIMWo5YtC1xArvxx4iPRI-hCmRS-4H5J03COM4IZw"
+              src="https://avatars.githubusercontent.com/u/129089073?v=4"
               alt="profile-picture" />
           </a>
         </div>
