@@ -34,7 +34,7 @@ const Statistics = () => {
           <div className="stats-card">
             <FontAwesomeIcon icon={faArrowTrendUp} />
             <div>
-              <p >Current Commit Streak: 2 Days</p>
+              <p >Current Commit Streak: 3 Days</p>
             </div>
           </div>
         </div>
