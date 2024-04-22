@@ -29,12 +29,12 @@ const Statistics = () => {
           </div>
           <div className="stats-card">
             <FontAwesomeIcon icon={faGithub} />
-            <p >80 Commits This Year</p>
+            <p >85 Commits This Year</p>
           </div>
           <div className="stats-card">
             <FontAwesomeIcon icon={faArrowTrendUp} />
             <div>
-              <p >Current Commit Streak: 4 Days</p>
+              <p >Current Commit Streak: 5 Days</p>
             </div>
           </div>
         </div>
