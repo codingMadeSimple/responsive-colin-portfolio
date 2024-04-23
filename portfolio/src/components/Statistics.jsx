@@ -29,12 +29,18 @@ const Statistics = () => {
           </div>
           <div className="stats-card">
             <FontAwesomeIcon icon={faGithub} />
-            <p >85 Commits This Year</p>
+            <p >86 Commits This Year</p>
           </div>
           <div className="stats-card">
             <FontAwesomeIcon icon={faArrowTrendUp} />
             <div>
-              <p >Current Commit Streak: 5 Days</p>
+              <p >Current Commit Streak: 6 Days</p>
+            </div>
+          </div>
+          <div className="stats-card-resume">
+            <div>
+              <a href="https://flowcv.com/resume/oa02rfocss"
+              target="_blank">Resume</a>
             </div>
           </div>
         </div>

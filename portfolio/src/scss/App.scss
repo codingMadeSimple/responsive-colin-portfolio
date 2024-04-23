@@ -320,6 +320,12 @@ main {
   align-items: baseline;
 }
 
+.stats-card-resume{
+  display:flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
 .statistics {
   padding-left: 5rem;
 }
